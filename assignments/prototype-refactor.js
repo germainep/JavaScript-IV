@@ -8,7 +8,7 @@ Prototype Refactor
 
 */
 class GameObject {
-  consturctor(attributes) {
+  constructor(attributes) {
     this.createdAt = attributes.createdAt;
     this.name = attributes.name;
     this.dimensions = attributes.dimensions;
@@ -29,16 +29,6 @@ class CharacterStats extends GameObject {
     return `${this.name} took damage`;
   }
 }
-
-/*
-  === Humanoid (Having an appearance or character resembling that of a human.) ===
-  * team
-  * weapons
-  * language
-  * greet() // prototype method -> returns the string '<object name> offers a greeting in <object language>.'
-  * should inherit destroy() from GameObject through CharacterStats
-  * should inherit takeDamage() from CharacterStats
-*/
 
 class Humanoid extends CharacterStats {
   constructor(attributes) {
